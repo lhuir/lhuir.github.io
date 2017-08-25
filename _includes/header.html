@@ -1,43 +1,66 @@
-  <header id="header">
-    <div class="headerWrap clearfix">
-      <a class="myFont title css2dcc4b9955748" href="{{ "/home" | prepend: site.baseurl }}">{{ site.title }}</a>
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Arcana by HTML5 UP</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="{{ site.baseurl }}/assets/css/ie/html5shiv.js"></script><![endif]-->
+		<script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+		<script src="{{ site.baseurl }}/assets/js/jquery.dropotron.min.js"></script>
+		<script src="{{ site.baseurl }}/assets/js/skel.min.js"></script>
+		<script src="{{ site.baseurl }}/assets/js/skel-layers.min.js"></script>
+		<script src="{{ site.baseurl }}/assets/js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/skel.css" />
+			<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
+			<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style-wide.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
 
-      <nav>
-        <ul>
-          <li><a href="{{ "/home" | prepend: site.baseurl }}" class="myFont css2dcc4b9955748">Home</a></li>
-          <li><a href="{{ "/index" | prepend: site.baseurl }}" class="myFont css2dcc4b9955748">Blog</a></li>
-          <li><a href="{{ "/about" | prepend: site.baseurl }}" class="myFont css2dcc4b9955748">About</a></li>
-        </ul>
-      </nav>
+		<!-- Header -->
+			<div id="header">
+						
+				<!-- Logo -->
+					<h1><a href="{{ site.baseurl }}/index.html" id="logo">Arcana <em>by HTML5 UP</em></a></h1>
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							{% assign current = page.url | downcase | split: '/' %}
+							<li {% if current[1] == 'index.html' %}class="current"{% endif %}><a href="{{ site.baseurl }}/index.html">Home</a></li>
+							<li>
+								<a href="">Dropdown</a>
+								<ul>
+									<li><a href="#">Lorem dolor</a></li>
+									<li><a href="#">Magna phasellus</a></li>
+									<li><a href="#">Etiam sed tempus</a></li>
+									<li>
+										<a href="">Submenu</a>
+										<ul>
+											<li><a href="#">Lorem dolor</a></li>
+											<li><a href="#">Phasellus magna</a></li>
+											<li><a href="#">Magna phasellus</a></li>
+											<li><a href="#">Etiam nisl</a></li>
+											<li><a href="#">Veroeros feugiat</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Veroeros feugiat</a></li>
+								</ul>
+							</li>
+							<li {% if current[1] == 'blog' %}class="current"{% endif %}><a href="{{ site.baseurl }}/blog">Blog</a></li>
+							<li {% if current[1] == 'left-sidebar.html' %}class="current"{% endif %}><a href="{{ site.baseurl }}/left-sidebar.html">Left Sidebar</a></li>
+							<li {% if current[1] == 'right-sidebar.html' %}class="current"{% endif %}><a href="{{ site.baseurl }}/right-sidebar.html">Right Sidebar</a></li>
+							<li {% if current[1] == 'two-sidebar.html' %}class="current"{% endif %}><a href="{{ site.baseurl }}/two-sidebar.html">Two Sidebar</a></li>
+							<li {% if current[1] == 'no-sidebar.html' %}class="current"{% endif %}><a href="{{ site.baseurl }}/no-sidebar.html">No Sidebar</a></li>
+						</ul>
+					</nav>
 
-<div class="search-tool" style="float: left;height: 45px;line-height: 45px;margin-left: 12px;">
-    <input type="text" class="form-control search-content" id="search-content" style="display: inline-block !important; 
-    color: #49525c;
-    font-size: 14px;
-    line-height: 17px;
-    background-color: #e1eaf2;
-    border: 1px solid #045bb2;
-    border-radius: 4px;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,.2),0 1px 0 rgba(255,255,255,.1);
-    outline: 0;
-    box-sizing: border-box;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;" placeholder="Search for what you are interested in...." />
-</div>
-
-<link rel="stylesheet" href="{{ "/search/css/cb-search.css" | prepend: site.baseurl }}">
-
-<script src="{{ "/search/js/bootstrap3-typeahead.min.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/search/js/cb-search.js" | prepend: site.baseurl }}"></script>
-
-      <a href="{{ site.resume }}" class="master">
-        <div class="avatarWrap">
-          <img src="{{ "/assets/avatar.jpg" | prepend: site.baseurl }}" alt="{{ site.author }}" style="max-width: 27px;" />
-        </div><span class="myFont css2dcc4b9955748">{{ site.author }}</span>
-      </a>
-    </div>
-  </header>
-
-  <main class="clearfix">
-    <div class="content">
-      <div class="content-inner">
+			</div>
